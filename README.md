@@ -1,4 +1,4 @@
-# CollectionViewRefresh
+# [iOS10]CollectionViewRefresh
 
 ## Summary
 We can use UIRefreshControl even CollectionView in iOS10.
