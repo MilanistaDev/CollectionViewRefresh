@@ -53,6 +53,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                                                               target: self,
                                                               action: #selector(refreshTrainData))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
+
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -107,7 +110,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell.stationName.text = self.HanzomonLineStNameArray[indexPath.row]
             cell.backgroundColor = UIColor.ClearHanzomonLineColor()
         default:
-            self.navigationController?.navigationBar.barTintColor = UIColor.red()
+            self.navigationController?.navigationBar.barTintColor = UIColor.red
             cell.stationNum.text = ""
             cell.stationName.text = ""
         }
@@ -127,21 +130,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 extension UIColor {
 
     class func GinzaLineColor() -> UIColor {
-        return UIColor(red: 243.0, green: 151.0, blue: 0.0, alpha: 1.0)
+        return UIColor(red: 243.0/255.0, green: 151.0/255.0, blue: 0.0/255.0, alpha: 1.0)
     }
     class func ClearGinzaLineColor() -> UIColor {
-        return UIColor(red: 243.0, green: 151.0, blue: 0.0, alpha: 0.1)
+        return UIColor(red: 243.0/255.0, green: 151.0/255.0, blue: 0.0/255.0, alpha: 0.1)
     }
     class func TozaiLineColor() -> UIColor {
-        return UIColor(red: 0.0, green: 167.0, blue: 219.0, alpha: 1.0)
+        return UIColor(red: 0.0/255.0, green: 167.0/255.0, blue: 219.0/255.0, alpha: 1.0)
     }
     class func ClearTozaiLineColor() -> UIColor {
-        return UIColor(red: 0.0, green: 167.0, blue: 219.0, alpha: 0.1)
+        return UIColor(red: 0.0/255.0, green: 167.0/255.0, blue: 219.0/255.0, alpha: 0.1)
     }
     class func HanzomonLineColor() -> UIColor {
-        return UIColor(red: 155.0, green: 124.0, blue: 182.0, alpha: 1.0)
+        return UIColor(red: 155.0/255.0, green: 124.0/255.0, blue: 182.0/255.0, alpha: 1.0)
     }
     class func ClearHanzomonLineColor() -> UIColor {
-        return UIColor(red: 155.0, green: 124.0, blue: 182.0, alpha: 0.1)
+        return UIColor(red: 155.0/255.0, green: 124.0/255.0, blue: 182.0/255.0, alpha: 0.1)
     }
 }
